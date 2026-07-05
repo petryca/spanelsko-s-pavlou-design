@@ -569,10 +569,12 @@ h1, h2, h3, h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-serif);
-  font-size: 56px;
-  font-weight: 600;
   color: var(--terra);
+}
+.story-card__fallback svg {
+  width: 56px;
+  height: 56px;
+  opacity: 0.85;
 }
 .story-card__body { padding: 20px 22px 24px; }
 .story-card__title {
