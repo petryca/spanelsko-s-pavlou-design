@@ -1,0 +1,522 @@
+[
+ {
+  "slug": "barcelona-je-pro-me-sociologicky-experiment",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Barcelona je pro mě sociologický experiment",
+  "excerpt": "Víc než milované město, kde se cítím doma, kde všude trefím, kde se nebojím nikam jít ve dne ani v noci, kde mám přátele, kde mi každá ulice, každý park, každý bar, restaurace, obchůdek připomíná okamžiky, které jsem tam prožila; město, které vidím růst (protože ráda koukám kolem sebe a pozoruju, je to strašně zábavné!) a kterému děsně fandím je pro mě SOCIOLOGICKÝ EXPERIMENTEM jestli je svět, který miluju a kterému věřím, vůbec možný.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "barcelonska-urban-legend-kterou-vymyslel-gaudi",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Barcelonská urban legend, kterou vymyslel Gaudí",
+  "excerpt": "A víte, že Sagrada Família je dnes nejvyšším kostelem světa?",
+  "read": 2,
+  "thumb": "blog/images/barcelonska-urban-legend-kterou-vymyslel-gaudi-1.jpg"
+ },
+ {
+  "slug": "co-to-vlastne-je-sagrada-familia",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Co to vlastně je Sagrada Família",
+  "excerpt": "Sagrada Familia je dnes jednou z nejnavštěvovanějších památek Evropy. Přitom její podstata je úplně jiná, než si většina lidí myslí. Není to jen slavný kostel.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "jak-se-stavi-sagrada-familia-ii",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Jak se staví Sagrada Família — díl II.: od provázků a maket po anarchisty",
+  "excerpt": "Když se dnes díváme na chrám Sagrada Família, snadno zapomeneme, že po většinu své výstavby vznikala bez elektřiny, bez počítačů a bez moderních strojů.",
+  "read": 5,
+  "thumb": "blog/images/jak-se-stavi-sagrada-familia-ii-1.jpg"
+ },
+ {
+  "slug": "kdo-dela-binec-na-ulicich-barcelony",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Kdo dělá binec na ulicích Barcelony",
+  "excerpt": "Chodím po ulicích Barcelony a pořád mě něčím překvapuje.\\ V poslední době hlavně svojí téměř nekonečnou schopností uklízet cizí binec.",
+  "read": 9,
+  "thumb": null
+ },
+ {
+  "slug": "kdyz-v-barcelone-nasnezi",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Když v Barceloně nasněží",
+  "excerpt": "ACAM (Associació Catalana de Meteorologia) má krásně zpracované historické údaje: v letech 1867–1966 zaznamenali 94 „sněhových dnů\", ale jen menší část z nich byla taková, že se dala měřit sněhová pokrývka – většinou to byly jen vločky, které hned roztály, nebo „voda se sněhem\".",
+  "read": 4,
+  "thumb": "blog/images/kdyz-v-barcelone-nasnezi-1.jpg"
+ },
+ {
+  "slug": "maly-velky-uklid-velkeho-mesta",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Malý velký úklid velkého města",
+  "excerpt": "Když se řekne úklid města, většina lidí si představí popelářské auto nebo zametací vůz, který občas projede ulicí. Jenže v případě Barcelony (město: 1,7 milionu obyvatel; barcelonská aglomerace – 3,4 milionu obyvatel; hustota zalidnění města 16 904,3 obyv./km² – pro srovnání: Praha 2 817,2 obyv./km², Brno 1 751,0 obyv./km² a Plzeň 1 364,8 obyv./km²) je to ve skutečnosti OBROVSKÝ, A HODNĚ DOBŘE ŘÍZENÝ SYSTÉM.",
+  "read": 4,
+  "thumb": "blog/images/maly-velky-uklid-velkeho-mesta-1.jpg"
+ },
+ {
+  "slug": "navsteva-papeze-v-barcelone",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Návštěva papeže v Barceloně",
+  "excerpt": "Papež Lev XIV. přiletí do Španělska. Papež Lev XIV. je podle mě frajer, o to víc mě to přijde zajímavý.",
+  "read": 3,
+  "thumb": "blog/images/navsteva-papeze-v-barcelone-1.jpg"
+ },
+ {
+  "slug": "proc-barcelona-funguje",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Proč Barcelona funguje (i s auty)",
+  "excerpt": "Pamatuji si 90. a nultá léta, kdy jsem v Barceloně žila. A pamatuji si i jedno nepsané pravidlo: pokud jsem do hodiny nenašla parkování v okruhu zhruba jednoho kilometru od domu, vzdala jsem to, zaparkovala jsem kde to šlo a dojela domů MHD. Jinak bych klidně projížděla městem do rána.",
+  "read": 4,
+  "thumb": "blog/images/proc-barcelona-funguje-1.jpg"
+ },
+ {
+  "slug": "jak-se-stavi-sagrada-familia-iii",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Sagrada Família — díl III",
+  "excerpt": "Stavba Sagrada Família se v posledních měsících dostala do fáze, kterou můžeme bez nadsázky označit za historickou.",
+  "read": 4,
+  "thumb": "blog/images/jak-se-stavi-sagrada-familia-iii-1.jpg"
+ },
+ {
+  "slug": "stripky-ze-zivota-gaudiho",
+  "cat": "barcelona",
+  "label": "Barcelona",
+  "order": 1,
+  "title": "Střípky ze života Antoni Gaudího",
+  "excerpt": "Jeho život byl stejně neobyčejný jako jeho architektura: nikdy se neoženil. Neměl děti. Na konci života žil téměř jako mnich. Když zemřel, považovali ho kolemjdoucí za obyčejného žebráka. O několik dní později se s ním přišlo rozloučit kolem třiceti tisíc lidí.",
+  "read": 5,
+  "thumb": "blog/images/stripky-ze-zivota-gaudiho-1.jpg"
+ },
+ {
+  "slug": "hasis-a-obcanska-valka",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Hašiš, chudoba a paměť mlčení. Proč Španělsko přistupuje ke konopí jinak než my",
+  "excerpt": "Když jsem v 90. letech přijela z postkomunistického Československa do Španělska, narazila jsem na realitu, která mi dlouho nedávala smysl.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "jak-to-je-ve-spanelsku-s-lidmi-nad-52-let",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Jak to je ve Španělsku s lidmi nad 52 let",
+  "excerpt": "Ve Španělsku existuje pro lidi ve věku 52+ velmi specifický systém ochrany nezaměstnaných, který je v Evropě poměrně neobvyklý. Nejde totiž jen o obyčejnou podporu v nezaměstnanosti, ale o mechanismus, který má starším lidem pomoci překlenout období od ztráty práce až do důchodu – a zároveň jim zachovat budoucí penzi.",
+  "read": 3,
+  "thumb": "blog/images/jak-to-je-ve-spanelsku-s-lidmi-nad-52-let-1.jpg"
+ },
+ {
+  "slug": "kdyz-monarchie-prestane-kryt-rodinu-za-kazdou-cenu",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Když monarchie přestane krýt rodinu za každou cenu",
+  "excerpt": "Španělská monarchie v posledních patnácti letech zažila něco, co se dá číst jako učebnicový příklad toho, jak se královský dvůr může stát rukojmím vlastních rodinných kompromisů – a jak rychle se reputační kapitál rozplyne, když se veřejnost začne ptát na to nejjednodušší: kdo za co platí, kdo s kým obchoduje, kdo je čí host a proč.",
+  "read": 6,
+  "thumb": "blog/images/kdyz-monarchie-prestane-kryt-rodinu-za-kazdou-cenu-1.jpg"
+ },
+ {
+  "slug": "maly-pribeh-o-toleranci",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Malý příběh o toleranci",
+  "excerpt": "Autobusová zastávka v jedné z vesniček v předhůří katalánských Pyrenejí.",
+  "read": 1,
+  "thumb": "blog/images/maly-pribeh-o-toleranci-1.jpg"
+ },
+ {
+  "slug": "o-svobode",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "O svobodě",
+  "excerpt": "Čím déle se pohybuji ve Španělsku a Katalánsku, tím víc si uvědomuji, že SVOBODA tady není slogan ani ideologický boj.",
+  "read": 3,
+  "thumb": "blog/images/o-svobode-1.jpg"
+ },
+ {
+  "slug": "siesta",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Siesta: rytmus, který se pomalu vytrácí",
+  "excerpt": "Slovo siesta je jedním z těch výrazů, které zná skoro každý – i ten, kdo ve Španělsku nikdy nebyl. Má v sobě něco lenivě příjemného, náznak odpočinku „ve stínu pod fíky\".",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "spain-is-different",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Spain is different",
+  "excerpt": "„Spain is different\" není pokřik, který mě napadl včera vpodvečer. Je to součást španělské kulturní identity.",
+  "read": 4,
+  "thumb": null
+ },
+ {
+  "slug": "co-spanelskeho-si-precist",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělsko není jen flamenco a moře aneb Co španělského si přečíst (v češtině, samozřejmě 😊)",
+  "excerpt": "Pokud nejste hispanisté nebo opravdu velcí čtenáři, španělská literatura nejspíš nebude z těch, které jako čtenáři běžně konzumujete. Přitom Španělé psát umějí – především neuvěřitelně atmosférické romány – o Barceloně, občanské válce, Andalusii, inkvizici, Baskicku i obyčejném životě. A v poslední době píšou i hodně dobré detektivky!",
+  "read": 5,
+  "thumb": null
+ },
+ {
+  "slug": "spanelsko-vysycha",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělsko vysychá… aneb Jak se z „evropské zahrady\" může stát polopoušť",
+  "excerpt": "Když přilétáte do jižního Španělska a podíváte se z okýnka letadla dolů, patrně vás překvapí obrovské plochy hnědé krajiny. Zeleně je málo, řeky bývají vyschlé a kolem středomořského pobřeží se táhnou nekonečné oblasti suché půdy. Ve Španělsku se už několik let otevřeně mluví o tom, že země čelí jednomu z největších environmentálních problémů v Evropě – desertifikaci, tedy postupné proměně krajiny v polopoušť.",
+  "read": 5,
+  "thumb": null
+ },
+ {
+  "slug": "spanelska-krestni-jmena",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělská křestní jména",
+  "excerpt": "Když jsem poprvé přišla do Španělska, jedna z věcí, které mě šokovaly, byla křestní (především ženská) jména. Slečna u kasy supermarketu, která hrdě nese cedulku se jménem CONCEPCION – neboli „POČETÍ\", servírka, na kterou volají ASUNCIÓN (tedy „NANEBEVZETÍ\") či sousedka AMPARO („ÚTOČIŠTĚ\").",
+  "read": 4,
+  "thumb": "blog/images/spanelska-krestni-jmena-1.jpg"
+ },
+ {
+  "slug": "spanelsky-rytmus-zivota-1",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělský rytmus života (1. díl)",
+  "excerpt": "Musím se smát při vzpomínce na padesátičlennou skupinu Španělů z jihu (převážně z Cádizu a okolí). Přišli o práci v cádizských loděnicích: ze dne na den zůstalo bez práce asi 1500 chlapů a mnozí z nich se, jako spousta dalších Španělů, nechali najmout agenturami, které je posílaly pracovat do zahraničí.",
+  "read": 3,
+  "thumb": "blog/images/spanelsky-rytmus-zivota-1-1.jpg"
+ },
+ {
+  "slug": "spanelsky-rytmus-zivota-2",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělský rytmus života (2. díl): vermut, dlouhé obědy a proč Španělé nikam nespěchají",
+  "excerpt": "Španělé mají jedno pořekadlo, které mi přijde geniální: no vivo para trabajar. Trabajo para vivir. Tedy … nežiju, abych pracoval. Pracuju, abych žil.",
+  "read": 3,
+  "thumb": "blog/images/spanelsky-rytmus-zivota-2-1.jpg"
+ },
+ {
+  "slug": "spanele-a-turismus",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Španělé a turismus",
+  "excerpt": "Poslouchám tu místní. Denně. A to, co se v českých diskuzích zjednodušuje na „levičáctví\" nebo dokonce „terorismus\", je ve skutečnosti něco mnohem hlubšího.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "zadny-chaos-ani-no-go-zony",
+  "cat": "spolecnost",
+  "label": "Společnost",
+  "order": 2,
+  "title": "Žádný chaos ani no-go zóny. Španělsko a jiná tvář migrace",
+  "excerpt": "BARCELONA, RAVAL. Stačí ujít pár kroků od La Rambly a člověk je v úplně jiném světě – a přitom pořád v centru města.",
+  "read": 5,
+  "thumb": "blog/images/zadny-chaos-ani-no-go-zony-1.jpg"
+ },
+ {
+  "slug": "antonio-banderas",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Antonio Banderas – nejslavnější kajícník Velikonoc",
+  "excerpt": "Na Svatý čtvrtek (Jueves Santo) vrcholí ve Španělsku Velikonoce. Dnes přes den i v noci prochází městy ta nejpočetnější procesí, atmosféra je nejhustší a ulice španělských měst zaplňují desetitisíce lidí.",
+  "read": 4,
+  "thumb": "blog/images/antonio-banderas-1.jpg"
+ },
+ {
+  "slug": "castellers",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Castellers: katalánská tradice postavená na důvěře",
+  "excerpt": "Když se na katalánském náměstí začne formovat kruh lidí v barevných košilích, místní vědí, že za pár minut vyroste něco neuvěřitelného – lidská věž vysoká jako čtyřpatrový dům.",
+  "read": 4,
+  "thumb": null
+ },
+ {
+  "slug": "corpus-christi-v-la-orotava",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Corpus Christi v La Orotava",
+  "excerpt": "Kdysi jsem žila rok na Tenerife. Právě jsem dokončila jednu školu, byla ve čtvrtém ročníku druhé, měla rozeslané životopisy do všech českých cestovek a čekala, jestli se některá ozve. Ozvala se. Hledali delegátku pro české i německé klienty na Tenerife. Na rok.",
+  "read": 4,
+  "thumb": "blog/images/corpus-christi-v-la-orotava-1.jpg"
+ },
+ {
+  "slug": "katalanske-vanoce",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Katalánské Vánoce: od Tlusťocha po Tři krále",
+  "excerpt": "Katalánské Vánoce nejsou rozhodně jen o jídle. Nejsou ani přehnaně zbožné, ani přehnaně sentimentální. Jsou praktické, symbolické a často překvapivě staré. Mísí se v nich křesťanství s předkřesťanskými rituály, rodinné tradice s moderním tlakem konzumu a vážné symboly s typickým katalánským humorem. Právě tahle kombinace z nich dělá Vánoce, které nejsou „na efekt\", ale skutečně žité.",
+  "read": 8,
+  "thumb": "blog/images/katalanske-vanoce-1.jpg"
+ },
+ {
+  "slug": "la-patum",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "La Patum – ohně, ďáblové a Boží tělo",
+  "excerpt": "La Patum je jedna z hodně zajímavých tradičních slavností Španělska.",
+  "read": 3,
+  "thumb": "blog/images/la-patum-1.jpg"
+ },
+ {
+  "slug": "semana-santa-den-treti",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Martes Santo – Svaté úterý: tajemné kápě a co s tím má společného Ku-klux-klan",
+  "excerpt": "Velikonoce jsou v plném proudu. Procesí přibývají, ulice se zaplňují a anonymní postavy v dlouhých hábitech se špičatými kápěmi jsou stále častější. Pro návštěvníky je to jeden z nejpůsobivějších, ale zároveň nejméně pochopených obrazů španělského Svatého týdne (Semana Santa).",
+  "read": 5,
+  "thumb": null
+ },
+ {
+  "slug": "semana-santa-den-prvni",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Semana Santa – den první",
+  "excerpt": "Atmosféra prvního dne je jiná než v dalších dnech. Je slavnostní, světlejší, méně dramatická. Ulice se plní lidmi, děti drží v rukou palmové ratolesti a města se pomalu připravují na nejintenzivnější týden celého roku.",
+  "read": 3,
+  "thumb": "blog/images/semana-santa-den-prvni-1.jpg"
+ },
+ {
+  "slug": "semana-santa-den-druhy",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Svaté pondělí – Lunes Santo: stokilové kříže na zádech a hodiny procesí bosky",
+  "excerpt": "Po slavnostní Palmové neděli začíná ve Španělsku skutečná Semana Santa.",
+  "read": 3,
+  "thumb": "blog/images/semana-santa-den-druhy-1.jpg"
+ },
+ {
+  "slug": "velikonoce-ve-spanelsku",
+  "cat": "svatky-a-slavnosti",
+  "label": "Svátky a slavnosti",
+  "order": 3,
+  "title": "Velikonoce ve Španělsku: víra, bolest, tradice a procesí, která zastaví život v celé zemi",
+  "excerpt": "Asi všichni víme, že Španělsko bylo po staletí jednou z nejkatoličtějších zemí Evropy. Katolická církev tu formovala život společnosti, určovala rytmus roku i podobu veřejného prostoru.",
+  "read": 4,
+  "thumb": null
+ },
+ {
+  "slug": "co-je-to-cava",
+  "cat": "dobroty-a-restaurace",
+  "label": "Dobroty a restaurace",
+  "order": 4,
+  "title": "Cava: „španělské šampaňské\", které šampaňským není",
+  "excerpt": "Možná jste už slyšeli, že Cava je „španělské šampaňské\". Španělé by vám na to ale řekli, že ne tak docela.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "churros-con-chocolate",
+  "cat": "dobroty-a-restaurace",
+  "label": "Dobroty a restaurace",
+  "order": 4,
+  "title": "Churros con Chocolate",
+  "excerpt": "Churros con chocolate je na první pohled jednoduchá věc: čerstvě smažené tyčinky z těsta (churros) někdy lehce cukrované, a k tomu hustá horká čokoláda, do které se churro namáčí. Ne dezert v „cukrárenském\" smyslu. Spíš rituál. Krátká pauza, horko v dlaních, cukr na prstech, těžká kakaovo-čokoládová vůně. Drobné štěstí, které se nedá úplně uspěchat.",
+  "read": 6,
+  "thumb": "blog/images/churros-con-chocolate-1.jpg"
+ },
+ {
+  "slug": "sangria-na-horke-leto",
+  "cat": "dobroty-a-restaurace",
+  "label": "Dobroty a restaurace",
+  "order": 4,
+  "title": "Parádní sangría na horké léto",
+  "excerpt": "Když ve Španělsku udeří letní vedra, není nad vychlazenou sangríu. Je to nápoj ke sdílení – velký džbán plný ovoce, vína a bublinek, který se postaví doprostřed stolu a vydrží celé odpoledne. Tady je můj osvědčený recept, který si zamilujete.",
+  "read": 2,
+  "thumb": null
+ },
+ {
+  "slug": "tortilla-de-patatas",
+  "cat": "dobroty-a-restaurace",
+  "label": "Dobroty a restaurace",
+  "order": 4,
+  "title": "Tortilla de Patatas",
+  "excerpt": "I španělská společnost je těžce rozdělená na dva nesmiřitelné tábory: tortilla s nebo bez cibule? Toť zásadní otázka každého pořádného Španěla.",
+  "read": 2,
+  "thumb": "blog/images/tortilla-de-patatas-1.jpg"
+ },
+ {
+  "slug": "sampanske-z-jerezu",
+  "cat": "dobroty-a-restaurace",
+  "label": "Dobroty a restaurace",
+  "order": 4,
+  "title": "„Šampaňské\" z Jerezu",
+  "excerpt": "Při svých cestách po Španělsku jsem poznala spoustu zajímavých lidí. Jedním z nich je Manolo. Kluk, který se narodil ve starém vinařství na jednom z kopců v okolí Jerezu. Kopec, na kterém stojí stará usedlost, všude okolo skoro bílá hlína (albariza) a v ní pečlivě opečovávané keře vinné révy. Dědictví po otci, po dědovi, po pradědovi. Manolo tam vyrostl. Jeho dětství i dospívání se točilo kolem vína. Vinice, sklizeň, zrání, sudy, lahve, kyselost, pH, škůdci a spousta práce.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "jak-si-spanele-s-portugalci-rozdelili-svet",
+  "cat": "historie",
+  "label": "Historie",
+  "order": 5,
+  "title": "Jak si Španělé s Portugalci rozdělili svět",
+  "excerpt": "Pohodlně se usaďte, dejte si kávu a čtěte …",
+  "read": 3,
+  "thumb": "blog/images/jak-si-spanele-s-portugalci-rozdelili-svet-1.jpg"
+ },
+ {
+  "slug": "kdyz-cechum-vladl-spanelsky-kral",
+  "cat": "historie",
+  "label": "Historie",
+  "order": 5,
+  "title": "Když Čechům vládl španělský král",
+  "excerpt": "Když se řekne Karel V., většina Čechů si jen obtížně vybaví, o koho šlo. Přitom šlo o jednoho z nejmocnějších panovníků evropských dějin – španělského krále a zároveň císaře Svaté říše římské.",
+  "read": 2,
+  "thumb": "blog/images/kdyz-cechum-vladl-spanelsky-kral-1.jpg"
+ },
+ {
+  "slug": "objeveni-ameriky-zmenilo-cely-svet",
+  "cat": "historie",
+  "label": "Historie",
+  "order": 5,
+  "title": "Objevení Ameriky změnilo celý svět. Ne kvůli Kolumbovi, ale kvůli tomu, co následovalo",
+  "excerpt": "Když Kryštof Kolumbus v roce 1492 přistál u břehů Ameriky, domníval se, že našel novou cestu do Asie. Ve skutečnosti ale odstartoval proces, který během několika desetiletí změnil fungování celé planety.",
+  "read": 4,
+  "thumb": "blog/images/objeveni-ameriky-zmenilo-cely-svet-1.jpg"
+ },
+ {
+  "slug": "jak-jsem-varila-merunkove-knedliky",
+  "cat": "mista",
+  "label": "Místa",
+  "order": 6,
+  "title": "Jak jsem vařila meruňkové knedlíky na anglickém dvoustěžníku",
+  "excerpt": "Psal se rok devatenáctset … a něco… ale to nechme být. Právě se otevřely hranice a já chtěla poznat svět. Jak na to? Zabalit krosnu a na silnici! Vyrazili jsme tedy s přítelem – stopem za dobrodružstvím. Všechno tu bylo pro nás, nic nebylo nemožné. Svoboda, ta lákala nejvíc.",
+  "read": 3,
+  "thumb": "blog/images/jak-jsem-varila-merunkove-knedliky-1.jpg"
+ },
+ {
+  "slug": "la-carolina",
+  "cat": "mista",
+  "label": "Místa",
+  "order": 6,
+  "title": "La Carolina – trochu jiný jih",
+  "excerpt": "Připravuju si takhle další text. Baví mě to. Sbírám si data o jednom andaluském městečku, které skoro nikdo nezná, a které na mě včera vyskočilo při srovnávání cen nemovitostí ve Španělsku. (je to tam levný, hodně levný – v tom městečku myslím 😊).",
+  "read": 10,
+  "thumb": "blog/images/la-carolina-1.jpg"
+ },
+ {
+  "slug": "zivot-v-jeskyni",
+  "cat": "bydleni",
+  "label": "Bydlení",
+  "order": 7,
+  "title": "Chtěli byste žít v jeskyni?",
+  "excerpt": "Představte si, že venku panují letní vedra přes 40 °C, ale vy doma nepotřebujete klimatizaci. V zimě zase netopíte – a přesto je uvnitř příjemných 18 až 20 stupňů. Nejde o futuristický ekologický projekt, ale o několik století starý způsob bydlení, který dodnes funguje v jižním Španělsku.",
+  "read": 4,
+  "thumb": "blog/images/zivot-v-jeskyni-1.jpg"
+ },
+ {
+  "slug": "trocha-spanelstiny",
+  "cat": "spanelstina",
+  "label": "Španělština",
+  "order": 8,
+  "title": "Trocha španělštiny",
+  "excerpt": "Základní cestovní fráze a slovíčka pro španělštinu, s českým překladem a výslovností.",
+  "read": 3,
+  "thumb": null
+ },
+ {
+  "slug": "barcelona-pro-lgbt-cestovatele",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Barcelona pro LGBT cestovatele",
+  "excerpt": "Barcelona není jen krásné město u moře. Pro mnoho LGBT cestovatelů je to místo, kde mohou svobodně dýchat.",
+  "read": 22,
+  "thumb": null
+ },
+ {
+  "slug": "ibiza-pro-lgbt-cestovatele",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Ibiza pro LGBT cestovatele",
+  "excerpt": "Ibiza není jen destinace pro party. A už dávno není ani pouze symbolem elektronické hudby, luxusních klubů a nekonečných nocí.",
+  "read": 40,
+  "thumb": null
+ },
+ {
+  "slug": "madrid-pro-lgbt-cestovatele",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Madrid pro LGBT cestovatele",
+  "excerpt": "Madrid nepůsobí jako typická „gay destinace“ u moře. Nemá pláže Barcelony ani dovolenkovou lehkost Torremolinos. A přesto je pro mnoho lidí jedním z nejsvobodnějších měst Evropy.",
+  "read": 33,
+  "thumb": null
+ },
+ {
+  "slug": "gay-friendly-plaze-ve-spanelsku",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Nejlepší gay friendly pláže ve Španělsku",
+  "excerpt": "Španělsko je dlouhodobě považováno za jednu z nejpřátelštějších destinací pro LGBT komunitu na světě, přičemž města jako Sitges, Madrid a Barcelona jsou vnímána jako „gay mekky“ Evropy. Tento otevřený přístup se přenáší i na pláže, kde panuje atmosféra svobody, tolerance a vzájemného respektu.",
+  "read": 8,
+  "thumb": null
+ },
+ {
+  "slug": "sitges",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Sitges: jedno z hlavních gay center Evropy",
+  "excerpt": "Sitges je malebné, ale světoznámé pobřežní město v Katalánsku, které v sobě spojuje bohatou historii, bohémskou atmosféru a status jedné z nejoblíbenějších LGBT destinací na světě. Zde je základní přehled pro vaši orientaci:",
+  "read": 13,
+  "thumb": null
+ },
+ {
+  "slug": "torremolinos",
+  "cat": "lgbt-spanelsko",
+  "label": "LGBT průvodce",
+  "order": 9,
+  "title": "Torremolinos: duhová oáza na Costa del Sol",
+  "excerpt": "Torremolinos není jen běžným letoviskem na jihu Španělska; je to symbol svobody, „španělský Stonewall“ a město, které se z chudé rybářské vesnice proměnilo v hlavní město diverzity jižní Evropy.",
+  "read": 42,
+  "thumb": null
+ }
+]
