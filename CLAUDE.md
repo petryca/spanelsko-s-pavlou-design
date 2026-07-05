@@ -16,7 +16,7 @@ lgbt-spanelsko.html Landing page listing the 6 LGBT travel guides
 articles/           5 practical guides (conversion content) + their hero JPGs; CTA → e-book/consultation
 blog/               55 story articles by Pavla (flat, generated from blog-md/); soft CTA → FB group/e-book
 blog/images/        Compressed JPGs for blog articles (<slug>-N.jpg, max 1200px wide)
-articles-markdown/  Markdown + PNG sources for articles/ (not published)
+articles-md/        Markdown + PNG sources for articles/ (not published)
 blog-md/            Markdown + image sources for blog/, one folder per category (not published)
 style.css           All styles (single shared stylesheet)
 script.js           Mobile nav toggle + scroll fade-in + story category filter
@@ -27,7 +27,7 @@ images/             All production images (see below)
 
 The site deliberately separates two kinds of content — keep them separate:
 
-1. **Practical guides** (`articles/`, sourced from `articles-markdown/`) — bottom-of-funnel
+1. **Practical guides** (`articles/`, sourced from `articles-md/`) — bottom-of-funnel
    conversion content for people actively planning a move. Listed as large post rows at the
    top of clanky.html. Each ends with a **hard CTA** (`.article__cta`): e-book + consultation.
 2. **Stories "Španělsko očima Pavly"** (`blog/`, sourced from `blog-md/`) — top-of-funnel
@@ -61,7 +61,7 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
 4. Verify: no dead links/images, then commit.
 
 **New practical guide (articles):**
-1. Markdown + feature image (PNG) into `articles-markdown/` (flat, ASCII slug).
+1. Markdown + feature image (PNG) into `articles-md/` (flat, ASCII slug).
 2. Convert image: `sips --resampleWidth 1200 -s format jpeg -s formatOptions 62` → `articles/<slug>.jpg`.
 3. Create `articles/<slug>.html` by copying an existing guide page (keep the `.article__cta` block,
    tailor its headline to the topic; link the closing e-book mention to `../ebook.html`).
