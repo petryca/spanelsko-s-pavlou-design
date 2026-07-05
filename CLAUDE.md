@@ -52,8 +52,8 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
    A new category = add it to `CATEGORIES` in `tools/gen_blog.py` + a new chip in clanky.html.
 2. Run `python3 tools/gen_blog.py` (needs `pip install markdown`; uses macOS `sips` for images).
    It regenerates all `blog/*.html`, converts/compresses images to `blog/images/<slug>-N.jpg`,
-   fixes docx artifacts (`--` → `–`, tiny inline images → 🙂), and writes a manifest JSON
-   to the session scratchpad.
+   fixes docx artifacts (`--` → `–`, tiny inline images → 🙂), and writes `tools/manifest.json`
+   (title/excerpt/read-time/thumbnail per article — useful for rebuilding the clanky.html grid).
 3. Add the story card to the grid in clanky.html by hand (copy an existing `.story-card`,
    set `data-cat`, href `blog/<slug>.html`, thumbnail = first image `blog/images/<slug>-1.jpg`,
    or `.story-card__fallback` with the title's first letter if the article has no images).
