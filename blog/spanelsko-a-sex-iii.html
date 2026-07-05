@@ -1,33 +1,10 @@
-#!/usr/bin/env python3
-"""Generate blog article pages from blog-md/ markdown sources."""
-import re, os, glob, html, json, math, subprocess, unicodedata
-
-ROOT = "/Users/david/Code/spanelsko-s-pavlou-design"
-OUT_HTML = os.path.join(ROOT, "blog")
-OUT_IMG = os.path.join(ROOT, "blog", "images")
-SCRATCH = os.path.dirname(os.path.abspath(__file__))
-
-import markdown as md_lib
-
-CATEGORIES = {  # folder -> (label, order)
-    "barcelona": ("Barcelona", 1),
-    "spolecnost": ("Společnost", 2),
-    "svatky-a-slavnosti": ("Svátky a slavnosti", 3),
-    "dobroty-a-restaurace": ("Dobroty a restaurace", 4),
-    "historie": ("Historie", 5),
-    "mista": ("Místa", 6),
-    "bydleni": ("Bydlení", 7),
-    "spanelstina": ("Španělština", 8),
-    "lgbt-spanelsko": ("LGBT průvodce", 9),
-}
-
-PAGE_TMPL = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@TITLE@ — Španělsko s Pavlou</title>
-  <meta name="description" content="@DESC@">
+  <title>Španělsko a sex III: kdy začínají, jak se chrání a proč mají děti tak pozdě? — Španělsko s Pavlou</title>
+  <meta name="description" content="Kdy Španělé začínají se sexem, jakou používají antikoncepci a proč mají děti tak pozdě? Pohled na španělský sexuální život v praxi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
@@ -64,20 +41,46 @@ PAGE_TMPL = """<!DOCTYPE html>
 
     <article class="article">
       <div class="container container--narrow">
-        <a href="@BACKURL@" class="article__back">
+        <a href="../clanky.html" class="article__back">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          @BACKLABEL@
+          Zpět na články
         </a>
         <div class="article__meta">
-          <span class="post-row__cat">@CAT@</span>
-          @READ@ min čtení
+          <span class="post-row__cat">Společnost</span>
+          4 min čtení
         </div>
-        <h1 class="article__title">@H1@</h1>
+        <h1 class="article__title">Španělsko a sex III: kdy začínají, jak se chrání a proč mají děti tak pozdě?</h1>
       </div>
 
       <div class="container container--narrow">
         <div class="article__body">
-@BODY@
+<p>Po dvou předchozích textech mi několik lidí napsalo otázku: „A jak to vlastně mají Španělé se sexem v praxi?"</p>
+<p>Začínají dřív než Češi? Mají více partnerů? Jsou otevřenější? Pojďme se na to tedy podívat trochu z blízka. ❤️</p>
+<h2>Začínají Španělé se sexem dřív než jiní Evropané?</h2>
+<p>Po tom všem, co jsem napsala, by se nabízela kladná odpověď. Jenže statistiky ukazují něco jiného.</p>
+<p>První sexuální zkušenost přichází u většiny Španělů přibližně kolem šestnáctého roku věku, tedy velmi podobně jako v jiných západoevropských zemích. Žádná španělská sexuální revoluce v tomto směru neexistuje.</p>
+<p>Rozdíl je spíš v tom, že se o těchto věcech mluví otevřeněji a mladí lidé mají k informacím mnohem snazší přístup.</p>
+<h2>Kondomy, antikoncepce a sexuální výchova</h2>
+<p>Když jsem do Španělska přijela poprvé na začátku devadesátých let, překvapilo mě, jak běžně se mluvilo o věcech, které byly u nás ještě trochu rozpačitým tématem. Od té doby se Španělsko posunulo ještě dál.</p>
+<p>Ve školách probíhají programy sexuální výchovy, existují kampaně zaměřené na HIV a další pohlavně přenosné choroby a řada autonomních regionů financuje osvětové projekty pro mladé lidi. Kondomy jsou běžně dostupné v lékárnách, automatech i supermarketech.</p>
+<p>Pro většinu mladých Španělů nejsou otázky antikoncepce nebo sexuálního zdraví ničím výjimečným. Jsou prostě součástí života.</p>
+<h2>Země, kde se sex neodkládá. Děti ano</h2>
+<p>Přestože mladí lidé začínají se sexuálním životem podobně jako jinde v Evropě, děti mají stále později.</p>
+<p>Průměrný věk prvorodiček patří mezi nejvyšší v Evropě – podle statistik má většina Španělek děti ve věku přes 31 let, více než 10 % dětí se rodí ženám nad 40 let.</p>
+<p>Podle španělských průzkumů je stále nejrozšířenější antikoncepční metodou používání kondomů (36–46 % párů podle různých výzkumů). Následuje hormonální antikoncepce a nitroděložní tělíska, která používají především ženy po třicítce a po dětech.</p>
+<p>Když se člověk podívá na ceny bydlení v Madridu, Barceloně nebo Málaze, začne tomu rozumět.</p>
+<p>Ve Španělsku se sexem začíná poměrně brzy, ale děti se rodí velmi pozdě. A společnost s tím je (zatím) dost v pohodě.</p>
+<p>U nás se pořád tak trochu předpokládá, že věci půjdou jednoduše: škola → práce → svatba → dítě. Ve Španělsku je dnes už mnohem běžnější schéma: škola → práce → práce → práce → práce → možná hypotéka → možná dítě, ve 35.</p>
+<h2>Co když se „něco stane"?</h2>
+<p>K sexu patří i méně romantické věci. Pohlavně přenosné choroby existují ve Španělsku stejně jako kdekoliv jinde. Rozdíl je spíš v tom, že se o nich mluví poměrně otevřeně.</p>
+<p>Bude to podle mě dědictví osmdesátých a devadesátých let, kdy Španělsko tvrdě zasáhla epidemie HIV. Právě tehdy vznikla řada preventivních programů, osvětových kampaní a testovacích center.</p>
+<p>Dnes tak ve větších městech není problém nechat se anonymně otestovat na HIV nebo jiné pohlavně přenosné choroby. Informace poskytují zdravotní centra, nemocnice i specializované neziskové organizace.</p>
+<p>Pro mnoho Španělů je návštěva gynekologa, androloga nebo sexuologa stejně normální jako návštěva zubaře. A možná právě to je další rozdíl oproti společnosti, kde se o podobných věcech raději mlčí.</p>
+<h2>A co starší generace?</h2>
+<p>Možná největší změna, kterou jsem ve Španělsku zažila, není u mladých, ale u lidí kolem padesátky, šedesátky nebo sedmdesátky.</p>
+<p>Generace, která vyrůstala za Franka v prostředí přísné katolické morálky, dnes žije ve společnosti, kde se o vztazích, sexualitě nebo sexuálním zdraví mluví zcela otevřeně. A většina z nich to přijala překvapivě dobře.</p>
+<p>Právě to mě na Španělsku fascinuje nejvíc. Ne že by bylo sexuálně „divočejší". Ale že během několika desetiletí dokázalo projít obrovskou společenskou změnou, aniž by přestalo být samo sebou. ❤️</p>
+<p>Po šestatřiceti letech mám pocit, že vztah Španělů k sexualitě není založený ani tak na větší odvázanosti, jak si často myslíme. Spíš na tom, že sex, vztahy, antikoncepci nebo sexuální zdraví považují za normální součást života. A možná právě proto kolem nich nemusí vytvářet tolik tajemství.</p>
         </div>
 
         <!-- CTA -->
@@ -143,134 +146,3 @@ PAGE_TMPL = """<!DOCTYPE html>
   <script src="../script.js"></script>
 </body>
 </html>
-"""
-
-_dim_cache = {}
-def img_dims(path):
-    if path not in _dim_cache:
-        out = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", path],
-                             capture_output=True, text=True).stdout
-        w = int(re.search(r"pixelWidth: (\d+)", out).group(1))
-        h = int(re.search(r"pixelHeight: (\d+)", out).group(1))
-        _dim_cache[path] = (w, h)
-    return _dim_cache[path]
-
-def convert_img(src, dest):
-    w, _ = img_dims(src)
-    args = ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "62"]
-    if w > 1200:
-        args += ["--resampleWidth", "1200"]
-    args += [src, "--out", dest]
-    subprocess.run(args, capture_output=True, check=True)
-
-def strip_md(text):
-    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
-    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
-    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-    text = re.sub(r"\*([^*]+)\*", r"\1", text)
-    return text.strip()
-
-def truncate(text, limit):
-    if len(text) <= limit:
-        return text
-    cut = text[:limit].rsplit(" ", 1)[0]
-    return cut.rstrip(",.;:–- ") + "…"
-
-os.makedirs(OUT_IMG, exist_ok=True)
-manifest = []
-
-for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
-    cat_key = os.path.basename(os.path.dirname(f))
-    slug = os.path.basename(f)[:-3]
-    label, order = CATEGORIES[cat_key]
-    text = open(f).read()
-
-    # title = first H1
-    m = re.search(r"^# (.+)$", text, re.M)
-    title = strip_md(m.group(1))
-    text = text[:m.start()] + text[m.end():]
-
-    # optional metadata block right after the title:
-    # **Slug:** ... / **Excerpt:** ... / **Meta description:** ... followed by ---
-    meta = {}
-    m2 = re.match(r"\s*((?:\*\*(?:Slug|Excerpt|Meta description):\*\*[^\n]*\n)+)\s*---\s*\n", text)
-    if m2:
-        for line in m2.group(1).splitlines():
-            mm = re.match(r"\*\*([^:]+):\*\*\s*(.*)", line)
-            if mm:
-                meta[mm.group(1)] = mm.group(2).strip()
-        text = text[m2.end():]
-
-    # images: convert + rewrite refs
-    n = 0
-    thumb = None
-    def repl_img(match):
-        global n, thumb
-        alt, path = match.group(1), match.group(2).strip()
-        src = os.path.join(os.path.dirname(f), path)
-        w, _ = img_dims(src)
-        if w < 100:
-            return "🙂"
-        n += 1
-        name = f"{slug}-{n}.jpg"
-        dest = os.path.join(OUT_IMG, name)
-        if not os.path.exists(dest):
-            convert_img(src, dest)
-        if thumb is None:
-            thumb = f"blog/images/{name}"
-        return f"![{alt}](images/{name})"
-    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", repl_img, text)
-
-    # docx export artifact: "--" should be a dash (skip table separator lines)
-    text = "\n".join(
-        line if line.lstrip().startswith("|") or re.fullmatch(r"-{3,}", line.strip())
-        else re.sub(r"(?<!-)--(?!-)", "–", line)
-        for line in text.split("\n")
-    )
-
-    # excerpt: first real paragraph
-    excerpt = ""
-    for para in text.split("\n\n"):
-        p = para.strip()
-        if not p or p.startswith("#") or p.startswith("![") or p.startswith("|"):
-            continue
-        if re.fullmatch(r"\*[^*]+\*", p):  # italic-only subtitle
-            continue
-        excerpt = strip_md(p.replace("\n", " "))
-        break
-    excerpt = meta.get("Excerpt", excerpt)
-
-    words = len(strip_md(text).split())
-    read = max(1, math.ceil(words / 200))
-
-    # internal cross-links written as ../<category>/<slug>.html -> flat blog/
-    text = re.sub(r"\]\(\.\./[a-z0-9-]+/([a-z0-9-]+\.html)\)", r"](\1)", text)
-
-    body = md_lib.markdown(text, extensions=["tables"])
-    body = body.replace("<img ", '<img loading="lazy" ')
-    body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener noreferrer"', body)
-
-    if cat_key == "lgbt-spanelsko":
-        backurl, backlabel = "../lgbt-spanelsko.html", "Zpět na LGBT průvodce"
-    else:
-        backurl, backlabel = "../clanky.html", "Zpět na články"
-
-    page = (PAGE_TMPL
-        .replace("@TITLE@", html.escape(title))
-        .replace("@DESC@", html.escape(meta.get("Meta description", truncate(excerpt, 155))))
-        .replace("@CAT@", label)
-        .replace("@READ@", str(read))
-        .replace("@H1@", html.escape(title, quote=False))
-        .replace("@BODY@", body)
-        .replace("@BACKURL@", backurl)
-        .replace("@BACKLABEL@", backlabel))
-    open(os.path.join(OUT_HTML, slug + ".html"), "w").write(page)
-
-    manifest.append({
-        "slug": slug, "cat": cat_key, "label": label, "order": order,
-        "title": title, "excerpt": excerpt, "read": read, "thumb": thumb,
-    })
-
-manifest.sort(key=lambda a: (a["order"], a["title"]))
-json.dump(manifest, open(os.path.join(SCRATCH, "manifest.json"), "w"), ensure_ascii=False, indent=1)
-print(f"Generated {len(manifest)} pages, {len(glob.glob(OUT_IMG + '/*.jpg'))} images")

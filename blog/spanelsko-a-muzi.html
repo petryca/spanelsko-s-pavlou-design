@@ -1,33 +1,10 @@
-#!/usr/bin/env python3
-"""Generate blog article pages from blog-md/ markdown sources."""
-import re, os, glob, html, json, math, subprocess, unicodedata
-
-ROOT = "/Users/david/Code/spanelsko-s-pavlou-design"
-OUT_HTML = os.path.join(ROOT, "blog")
-OUT_IMG = os.path.join(ROOT, "blog", "images")
-SCRATCH = os.path.dirname(os.path.abspath(__file__))
-
-import markdown as md_lib
-
-CATEGORIES = {  # folder -> (label, order)
-    "barcelona": ("Barcelona", 1),
-    "spolecnost": ("Společnost", 2),
-    "svatky-a-slavnosti": ("Svátky a slavnosti", 3),
-    "dobroty-a-restaurace": ("Dobroty a restaurace", 4),
-    "historie": ("Historie", 5),
-    "mista": ("Místa", 6),
-    "bydleni": ("Bydlení", 7),
-    "spanelstina": ("Španělština", 8),
-    "lgbt-spanelsko": ("LGBT průvodce", 9),
-}
-
-PAGE_TMPL = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@TITLE@ — Španělsko s Pavlou</title>
-  <meta name="description" content="@DESC@">
+  <title>Španělsko a muži – od machismu k manosféře — Španělsko s Pavlou</title>
+  <meta name="description" content="Od machismu k manosféře. Jak se proměnila role španělských mužů, když Španělsko během jedné generace prošlo obrovskou společenskou změnou.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
@@ -64,20 +41,31 @@ PAGE_TMPL = """<!DOCTYPE html>
 
     <article class="article">
       <div class="container container--narrow">
-        <a href="@BACKURL@" class="article__back">
+        <a href="../clanky.html" class="article__back">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          @BACKLABEL@
+          Zpět na články
         </a>
         <div class="article__meta">
-          <span class="post-row__cat">@CAT@</span>
-          @READ@ min čtení
+          <span class="post-row__cat">Společnost</span>
+          3 min čtení
         </div>
-        <h1 class="article__title">@H1@</h1>
+        <h1 class="article__title">Španělsko a muži – od machismu k manosféře</h1>
       </div>
 
       <div class="container container--narrow">
         <div class="article__body">
-@BODY@
+<p>Když jsem začala jezdit do Španělska, ještě jsem zažila poslední dozvuky starého světa. Světa, ve kterém byly role mužů a žen poměrně jasně dané: muž vydělává peníze, žena se stará o domácnost a děti. Neříkám, že to tak bylo všude, ale rozhodně jsem takové rodiny poznala.</p>
+<p>Dnes je Španělsko úplně jiné.</p>
+<p>Dnešní Španělsko patří mezi nejvíce feministické země Evropy: ženy studují, budují kariéru, vydělávají vlastní peníze, později zakládají rodiny a mnohem méně potřebují partnera z ekonomických důvodů. Mnoho věcí, za které jejich matky a babičky bojovaly, dnes považujeme za samozřejmost.</p>
+<p>Jenže každá velká změna má i druhou stranu. A právě ta mě v posledních letech začala zajímat.</p>
+<p>Když si dnes čtu španělské noviny nebo sleduji sociální sítě, výraz „manosféra" tu nacházím celkem často. Vidím skupiny mladých mužů, kteří mají pocit, že svět už není nastavený v jejich prospěch; influencery, kteří jim vysvětlují, proč jsou jejich problémy vlastně vinou feminismu; mladé kluky, kteří mají pocit, že nevědí, co se od nich vlastně očekává.</p>
+<p>Přitom jejich tátové a dědové to měli jasné – bývali „macho" (<em>macho</em> = samec). A dnes se najednou bavíme o mladých mužích, kteří si nejsou jistí svou rolí ve společnosti.</p>
+<p>Zas tak překvapivé to podle mě není. Španělsko prošlo během jediné generace změnou, která v některých jiných zemích trvala mnohem déle. Ještě za Franka a léta po něm byla role mužů a žen poměrně jasně daná. Dnes vyrůstají mladí lidé ve světě, kde tahle neférová, ale zato všem jasná pravidla neplatí. A je to dobře. Jenže spolu s nimi zmizela i část jistot, na kterých byly postavené předchozí generace.</p>
+<p>Nejsou to mladí muži, kdo v partnerství určují hlavní směr. Všechno je potřeba vyjednat znovu a jinak: partnerství, rodina, práce, děti, očekávání. A ne každý se v tom orientuje stejně dobře.</p>
+<p>K tomu připočtěme jednu důležitou věc – bydlení. Nájmy jsou vysoké, byty drahé. Stálá práce není samozřejmostí. A tak mladí Španělé odcházejí od rodičů mnohem později než generace jejich rodičů, a určitým způsobem nemají čas ani prostor být „mladí a nezkušení". Není divu, že někteří hledají jednoduchá vysvětlení. A internet jich nabízí spoustu.</p>
+<p>Nejsem sociolog ani odborník na manosféru. Jsem jen člověk, který Španělsko pozoruje už přes třicet let a má možnost srovnávat ho s Českem i dalšími zeměmi.</p>
+<p>A čím déle nad tím přemýšlím, tím víc mám pocit, že debata o machismu, feminismu nebo manosféře není ani tak debatou o mužích a ženách. Je to debata o tom, jak se lidé vyrovnávají se světem, který se změnil rychleji než kdykoliv předtím. Světem plným nejistot, informačního chaosu a cílených útoků na nejniternější bolístky nás všech.</p>
+<p>Každopádně to není problém, který by se týkal jen španělských mužů. Týká se nás všech.</p>
         </div>
 
         <!-- CTA -->
@@ -143,134 +131,3 @@ PAGE_TMPL = """<!DOCTYPE html>
   <script src="../script.js"></script>
 </body>
 </html>
-"""
-
-_dim_cache = {}
-def img_dims(path):
-    if path not in _dim_cache:
-        out = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", path],
-                             capture_output=True, text=True).stdout
-        w = int(re.search(r"pixelWidth: (\d+)", out).group(1))
-        h = int(re.search(r"pixelHeight: (\d+)", out).group(1))
-        _dim_cache[path] = (w, h)
-    return _dim_cache[path]
-
-def convert_img(src, dest):
-    w, _ = img_dims(src)
-    args = ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "62"]
-    if w > 1200:
-        args += ["--resampleWidth", "1200"]
-    args += [src, "--out", dest]
-    subprocess.run(args, capture_output=True, check=True)
-
-def strip_md(text):
-    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
-    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
-    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-    text = re.sub(r"\*([^*]+)\*", r"\1", text)
-    return text.strip()
-
-def truncate(text, limit):
-    if len(text) <= limit:
-        return text
-    cut = text[:limit].rsplit(" ", 1)[0]
-    return cut.rstrip(",.;:–- ") + "…"
-
-os.makedirs(OUT_IMG, exist_ok=True)
-manifest = []
-
-for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
-    cat_key = os.path.basename(os.path.dirname(f))
-    slug = os.path.basename(f)[:-3]
-    label, order = CATEGORIES[cat_key]
-    text = open(f).read()
-
-    # title = first H1
-    m = re.search(r"^# (.+)$", text, re.M)
-    title = strip_md(m.group(1))
-    text = text[:m.start()] + text[m.end():]
-
-    # optional metadata block right after the title:
-    # **Slug:** ... / **Excerpt:** ... / **Meta description:** ... followed by ---
-    meta = {}
-    m2 = re.match(r"\s*((?:\*\*(?:Slug|Excerpt|Meta description):\*\*[^\n]*\n)+)\s*---\s*\n", text)
-    if m2:
-        for line in m2.group(1).splitlines():
-            mm = re.match(r"\*\*([^:]+):\*\*\s*(.*)", line)
-            if mm:
-                meta[mm.group(1)] = mm.group(2).strip()
-        text = text[m2.end():]
-
-    # images: convert + rewrite refs
-    n = 0
-    thumb = None
-    def repl_img(match):
-        global n, thumb
-        alt, path = match.group(1), match.group(2).strip()
-        src = os.path.join(os.path.dirname(f), path)
-        w, _ = img_dims(src)
-        if w < 100:
-            return "🙂"
-        n += 1
-        name = f"{slug}-{n}.jpg"
-        dest = os.path.join(OUT_IMG, name)
-        if not os.path.exists(dest):
-            convert_img(src, dest)
-        if thumb is None:
-            thumb = f"blog/images/{name}"
-        return f"![{alt}](images/{name})"
-    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", repl_img, text)
-
-    # docx export artifact: "--" should be a dash (skip table separator lines)
-    text = "\n".join(
-        line if line.lstrip().startswith("|") or re.fullmatch(r"-{3,}", line.strip())
-        else re.sub(r"(?<!-)--(?!-)", "–", line)
-        for line in text.split("\n")
-    )
-
-    # excerpt: first real paragraph
-    excerpt = ""
-    for para in text.split("\n\n"):
-        p = para.strip()
-        if not p or p.startswith("#") or p.startswith("![") or p.startswith("|"):
-            continue
-        if re.fullmatch(r"\*[^*]+\*", p):  # italic-only subtitle
-            continue
-        excerpt = strip_md(p.replace("\n", " "))
-        break
-    excerpt = meta.get("Excerpt", excerpt)
-
-    words = len(strip_md(text).split())
-    read = max(1, math.ceil(words / 200))
-
-    # internal cross-links written as ../<category>/<slug>.html -> flat blog/
-    text = re.sub(r"\]\(\.\./[a-z0-9-]+/([a-z0-9-]+\.html)\)", r"](\1)", text)
-
-    body = md_lib.markdown(text, extensions=["tables"])
-    body = body.replace("<img ", '<img loading="lazy" ')
-    body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener noreferrer"', body)
-
-    if cat_key == "lgbt-spanelsko":
-        backurl, backlabel = "../lgbt-spanelsko.html", "Zpět na LGBT průvodce"
-    else:
-        backurl, backlabel = "../clanky.html", "Zpět na články"
-
-    page = (PAGE_TMPL
-        .replace("@TITLE@", html.escape(title))
-        .replace("@DESC@", html.escape(meta.get("Meta description", truncate(excerpt, 155))))
-        .replace("@CAT@", label)
-        .replace("@READ@", str(read))
-        .replace("@H1@", html.escape(title, quote=False))
-        .replace("@BODY@", body)
-        .replace("@BACKURL@", backurl)
-        .replace("@BACKLABEL@", backlabel))
-    open(os.path.join(OUT_HTML, slug + ".html"), "w").write(page)
-
-    manifest.append({
-        "slug": slug, "cat": cat_key, "label": label, "order": order,
-        "title": title, "excerpt": excerpt, "read": read, "thumb": thumb,
-    })
-
-manifest.sort(key=lambda a: (a["order"], a["title"]))
-json.dump(manifest, open(os.path.join(SCRATCH, "manifest.json"), "w"), ensure_ascii=False, indent=1)
-print(f"Generated {len(manifest)} pages, {len(glob.glob(OUT_IMG + '/*.jpg'))} images")

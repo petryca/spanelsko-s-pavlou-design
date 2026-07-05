@@ -1,33 +1,10 @@
-#!/usr/bin/env python3
-"""Generate blog article pages from blog-md/ markdown sources."""
-import re, os, glob, html, json, math, subprocess, unicodedata
-
-ROOT = "/Users/david/Code/spanelsko-s-pavlou-design"
-OUT_HTML = os.path.join(ROOT, "blog")
-OUT_IMG = os.path.join(ROOT, "blog", "images")
-SCRATCH = os.path.dirname(os.path.abspath(__file__))
-
-import markdown as md_lib
-
-CATEGORIES = {  # folder -> (label, order)
-    "barcelona": ("Barcelona", 1),
-    "spolecnost": ("Společnost", 2),
-    "svatky-a-slavnosti": ("Svátky a slavnosti", 3),
-    "dobroty-a-restaurace": ("Dobroty a restaurace", 4),
-    "historie": ("Historie", 5),
-    "mista": ("Místa", 6),
-    "bydleni": ("Bydlení", 7),
-    "spanelstina": ("Španělština", 8),
-    "lgbt-spanelsko": ("LGBT průvodce", 9),
-}
-
-PAGE_TMPL = """<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>@TITLE@ — Španělsko s Pavlou</title>
-  <meta name="description" content="@DESC@">
+  <title>Španělsko a bezpečnost — Španělsko s Pavlou</title>
+  <meta name="description" content="Podle Global Peace Index patří Španělsko dlouhodobě mezi bezpečné země světa. V roce 2025 se umístilo na 25. místě ze 163 hodnocených států.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
@@ -64,20 +41,43 @@ PAGE_TMPL = """<!DOCTYPE html>
 
     <article class="article">
       <div class="container container--narrow">
-        <a href="@BACKURL@" class="article__back">
+        <a href="../clanky.html" class="article__back">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-          @BACKLABEL@
+          Zpět na články
         </a>
         <div class="article__meta">
-          <span class="post-row__cat">@CAT@</span>
-          @READ@ min čtení
+          <span class="post-row__cat">Společnost</span>
+          4 min čtení
         </div>
-        <h1 class="article__title">@H1@</h1>
+        <h1 class="article__title">Španělsko a bezpečnost</h1>
       </div>
 
       <div class="container container--narrow">
         <div class="article__body">
-@BODY@
+<p>Podle Global Peace Index patří Španělsko dlouhodobě mezi bezpečné země světa. V roce 2025 se umístilo na 25. místě ze 163 hodnocených států.</p>
+<p>Já osobně vnímám Španělsko jako bezpečnou zemi.</p>
+<p>I když nepopírám, že leccos už jsem tu viděla i zažila. Zlo, drogy, násilí – tomu už se dnes neubráníme skoro nikde na světě.</p>
+<p>Ve Španělsku jsou to většinou lokalizované (a relativně snadno lokalizovatelné) problémy. Ať už přijíždíte jako turisté nebo chcete ve Španělsku bydlet, je dobré se poptat, zda město nebo oblast, kam právě míříte, nějaká taková nechvalně známá místa má. Často to jsou místa „profláklá", kde jsou drogy, prostituce, kapsáři a kde může (ale nemusí) být nebezpečno, minimálně pro vaše peněženky.</p>
+<p>Ve Španělsku nenajdete vyslovené NO-GO zóny, kam by se běžný člověk nemohl vydat. Většina větších měst má ale své problematičtější čtvrti. O některých z nich v Barceloně a Madridu jsem psala v textu <a href="zadny-chaos-ani-no-go-zony.html">„Žádný chaos ani no-go zóny"</a>.</p>
+<p>V těchto čtvrtích bývají drogy, narcopisos (byty využívané k prodeji drog), prostituce a vyšší koncentrace drobné kriminality. V Barceloně se v drogovém prostředí často zmiňují skupiny pákistánského, marockého nebo dominikánského původu, v Madridu pak zejména dominikánské, marocké a další latinskoamerické gangy. Přesto nejde o místa, kterým by se místní nebo turisté vyhýbali. Naopak. Často zde najdete zajímavé bary, restaurace, obchůdky i pestrý noční život.</p>
+<p>Podle statistik, ale i z vlastní zkušenosti a zkušeností mých přátel je nejbezpečnější sever země – Asturie, Galicie, Kantábrie nebo Baskicko. Velmi dobré renomé mají také města jako Oviedo, Salamanca, Logroño, Burgos nebo Valladolid. Za mě nevidím problém ani ve Valencii, která nabízí kombinaci velkoměstského života a poměrně vysokého pocitu bezpečí.</p>
+<p>Naopak větší opatrnost je na místě v turisticky nejvytíženějších lokalitách. To se týká především Barcelony, některých částí Madridu a známých přímořských letovisek. Ne kvůli násilné kriminalitě, ale především kvůli kapsářům, krádežím mobilních telefonů, kabelek a různým turistickým podvodům.</p>
+<p>Barcelona má v tomto ohledu nedobrou pověst. I statistiky poukazují na velké množství především drobných krádeží, zejména v okolí Ramblas, v metru, na nádražích a u turistických atrakcí.</p>
+<p>Stále tomu nerozumím. Když jsem někde, kde je hodně lidí, a je to jedno, jestli v Praze, Barceloně nebo v Somálsku, chovám se tak, abych nedávala případnému zloději šanci:</p>
+<ul>
+<li>Batoh nebo kabelku nosím před sebou. Není to pohodlné, ale funguje to.</li>
+<li>Telefon nenechávám položený na stole v restauraci. Především na venkovních teráskách, kde okolo procházejí davy lidí.</li>
+<li>Zadní kapsa kalhot je na kapesník. Telefon, peněženka, doklady ani nic důležitého v ní nemá co dělat.</li>
+<li>V autě se zamykám. Těch dobrých lidí, kteří mi chtěli umýt čelní sklo (a vytáhnout kabelku z auta) jsem potkala už příliš na to, abych si zbytečně zahrávala.</li>
+<li>V zaparkovaném autě nenechávám na očích nic. Prostě nic. Protože i v odložené bundě může být peněženka a někomu to bude stát za to, vám rozbít okýnko a ověřit si to.</li>
+<li>Nevěnuji pozornost ženám, které mi na ulici něco nabízejí. Většinou snítku rozmarýnu nebo čtení z ruky. Věřte, že i kdybyste neuměli jediné španělské slovo, jsou z vás schopné něco vytáhnout.</li>
+<li>V metru si dávám pozor dvojnásob. Při nastupování, vystupování, při cestě v narvaném vagonu. Moje věci jsou moje a nikomu je nedám!</li>
+</ul>
+<p>Pro člověka, který ve Španělsku žije, jsou ale často větším tématem jiné věci – vykrádání domů a bytů, podvody, problematika okupace dlouhodobě prázdných nemovitostí nebo soužití s drogovou scénou v některých čtvrtích. Všechno má řešení, většinou není ani tak složité. Je ale potřeba dobře přemýšlet předem. Zjišťovat si informace. Nepodlehnout lákadlu krásných fotografií. Vědět do čeho jdu.</p>
+<p>O všech možných nástrahách se dozvíte v <a href="../ebook.html">e-booku</a>. Popisuji dopodrobna, jaké pasti na nově příchozí mohou čekat, jak si na tom všem nevylámat zuby a zvládnout to bez ztráty kytičky.</p>
+<p>Protože přes to všechno bych po letech strávených ve Španělsku řekla jedno: ve Španělsku se nebojím. Právě proto, že ho znám.</p>
+<p>Španělsko není země, kde by se člověk měl bát vyjít večer ven. Je to ale země, kde se vyplatí používat zdravý rozum, dávat pozor na své věci a respektovat doporučení místních.</p>
+<p>Zvýšená opatrnost je určitě na místě. Strach ne 😊.</p>
         </div>
 
         <!-- CTA -->
@@ -143,134 +143,3 @@ PAGE_TMPL = """<!DOCTYPE html>
   <script src="../script.js"></script>
 </body>
 </html>
-"""
-
-_dim_cache = {}
-def img_dims(path):
-    if path not in _dim_cache:
-        out = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", path],
-                             capture_output=True, text=True).stdout
-        w = int(re.search(r"pixelWidth: (\d+)", out).group(1))
-        h = int(re.search(r"pixelHeight: (\d+)", out).group(1))
-        _dim_cache[path] = (w, h)
-    return _dim_cache[path]
-
-def convert_img(src, dest):
-    w, _ = img_dims(src)
-    args = ["sips", "-s", "format", "jpeg", "-s", "formatOptions", "62"]
-    if w > 1200:
-        args += ["--resampleWidth", "1200"]
-    args += [src, "--out", dest]
-    subprocess.run(args, capture_output=True, check=True)
-
-def strip_md(text):
-    text = re.sub(r"!\[[^\]]*\]\([^)]+\)", "", text)
-    text = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
-    text = re.sub(r"\*\*([^*]+)\*\*", r"\1", text)
-    text = re.sub(r"\*([^*]+)\*", r"\1", text)
-    return text.strip()
-
-def truncate(text, limit):
-    if len(text) <= limit:
-        return text
-    cut = text[:limit].rsplit(" ", 1)[0]
-    return cut.rstrip(",.;:–- ") + "…"
-
-os.makedirs(OUT_IMG, exist_ok=True)
-manifest = []
-
-for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
-    cat_key = os.path.basename(os.path.dirname(f))
-    slug = os.path.basename(f)[:-3]
-    label, order = CATEGORIES[cat_key]
-    text = open(f).read()
-
-    # title = first H1
-    m = re.search(r"^# (.+)$", text, re.M)
-    title = strip_md(m.group(1))
-    text = text[:m.start()] + text[m.end():]
-
-    # optional metadata block right after the title:
-    # **Slug:** ... / **Excerpt:** ... / **Meta description:** ... followed by ---
-    meta = {}
-    m2 = re.match(r"\s*((?:\*\*(?:Slug|Excerpt|Meta description):\*\*[^\n]*\n)+)\s*---\s*\n", text)
-    if m2:
-        for line in m2.group(1).splitlines():
-            mm = re.match(r"\*\*([^:]+):\*\*\s*(.*)", line)
-            if mm:
-                meta[mm.group(1)] = mm.group(2).strip()
-        text = text[m2.end():]
-
-    # images: convert + rewrite refs
-    n = 0
-    thumb = None
-    def repl_img(match):
-        global n, thumb
-        alt, path = match.group(1), match.group(2).strip()
-        src = os.path.join(os.path.dirname(f), path)
-        w, _ = img_dims(src)
-        if w < 100:
-            return "🙂"
-        n += 1
-        name = f"{slug}-{n}.jpg"
-        dest = os.path.join(OUT_IMG, name)
-        if not os.path.exists(dest):
-            convert_img(src, dest)
-        if thumb is None:
-            thumb = f"blog/images/{name}"
-        return f"![{alt}](images/{name})"
-    text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", repl_img, text)
-
-    # docx export artifact: "--" should be a dash (skip table separator lines)
-    text = "\n".join(
-        line if line.lstrip().startswith("|") or re.fullmatch(r"-{3,}", line.strip())
-        else re.sub(r"(?<!-)--(?!-)", "–", line)
-        for line in text.split("\n")
-    )
-
-    # excerpt: first real paragraph
-    excerpt = ""
-    for para in text.split("\n\n"):
-        p = para.strip()
-        if not p or p.startswith("#") or p.startswith("![") or p.startswith("|"):
-            continue
-        if re.fullmatch(r"\*[^*]+\*", p):  # italic-only subtitle
-            continue
-        excerpt = strip_md(p.replace("\n", " "))
-        break
-    excerpt = meta.get("Excerpt", excerpt)
-
-    words = len(strip_md(text).split())
-    read = max(1, math.ceil(words / 200))
-
-    # internal cross-links written as ../<category>/<slug>.html -> flat blog/
-    text = re.sub(r"\]\(\.\./[a-z0-9-]+/([a-z0-9-]+\.html)\)", r"](\1)", text)
-
-    body = md_lib.markdown(text, extensions=["tables"])
-    body = body.replace("<img ", '<img loading="lazy" ')
-    body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener noreferrer"', body)
-
-    if cat_key == "lgbt-spanelsko":
-        backurl, backlabel = "../lgbt-spanelsko.html", "Zpět na LGBT průvodce"
-    else:
-        backurl, backlabel = "../clanky.html", "Zpět na články"
-
-    page = (PAGE_TMPL
-        .replace("@TITLE@", html.escape(title))
-        .replace("@DESC@", html.escape(meta.get("Meta description", truncate(excerpt, 155))))
-        .replace("@CAT@", label)
-        .replace("@READ@", str(read))
-        .replace("@H1@", html.escape(title, quote=False))
-        .replace("@BODY@", body)
-        .replace("@BACKURL@", backurl)
-        .replace("@BACKLABEL@", backlabel))
-    open(os.path.join(OUT_HTML, slug + ".html"), "w").write(page)
-
-    manifest.append({
-        "slug": slug, "cat": cat_key, "label": label, "order": order,
-        "title": title, "excerpt": excerpt, "read": read, "thumb": thumb,
-    })
-
-manifest.sort(key=lambda a: (a["order"], a["title"]))
-json.dump(manifest, open(os.path.join(SCRATCH, "manifest.json"), "w"), ensure_ascii=False, indent=1)
-print(f"Generated {len(manifest)} pages, {len(glob.glob(OUT_IMG + '/*.jpg'))} images")

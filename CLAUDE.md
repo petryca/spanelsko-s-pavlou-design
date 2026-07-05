@@ -43,8 +43,10 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
 ## Publishing workflow — adding a new article
 
 **New story (blog):**
-1. Drop the markdown into `blog-md/<category>/<slug>.md` — H1 = title, first paragraph = excerpt/meta
-   description. Images go in `blog-md/<category>/<slug>-media/` and are referenced inline with
+1. Drop the markdown into `blog-md/<category>/<slug>.md` — H1 = title. An optional metadata block
+   right after the H1 (lines `**Slug:** …`, `**Excerpt:** …`, `**Meta description:** …` followed by
+   `---`) overrides the auto-derived excerpt and meta description; without it the first paragraph
+   is used. Images go in `blog-md/<category>/<slug>-media/` and are referenced inline with
    relative paths. Valid categories (folder → chip label): barcelona → Barcelona,
    spolecnost → Společnost, svatky-a-slavnosti → Svátky a slavnosti,
    dobroty-a-restaurace → Dobroty a restaurace, historie → Historie, mista → Místa,
@@ -54,10 +56,9 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
    It regenerates all `blog/*.html`, converts/compresses images to `blog/images/<slug>-N.jpg`,
    fixes docx artifacts (`--` → `–`, tiny inline images → 🙂), and writes `tools/manifest.json`
    (title/excerpt/read-time/thumbnail per article — useful for rebuilding the clanky.html grid).
-3. Add the story card to the grid in clanky.html by hand (copy an existing `.story-card`,
-   set `data-cat`, href `blog/<slug>.html`, thumbnail = first image `blog/images/<slug>-1.jpg`,
-   or `.story-card__fallback` with the title's first letter if the article has no images).
-   For an LGBT guide, add a `.post-row--simple` row to lgbt-spanelsko.html instead.
+3. Run `python3 tools/rebuild_grid.py` — regenerates the story card grid in clanky.html from
+   `tools/manifest.json`. For an LGBT guide, add a `.post-row--simple` row to
+   lgbt-spanelsko.html by hand instead (LGBT articles are excluded from the grid).
 4. Verify: no dead links/images, then commit.
 
 **New practical guide (articles):**
