@@ -12,10 +12,10 @@ o-pavle.html        About Pavla
 kontakt.html        Contact form + WhatsApp
 clanky.html         Content hub: practical guides (post rows) + story grid with category filter + LGBT teaser
 ebook.html          E-book landing page
-lgbt-spanelsko.html Landing page listing the 6 LGBT travel guides
-articles/           5 practical guides (conversion content) + their hero JPGs; CTA → e-book/consultation
-blog/               55 story articles by Pavla (flat, generated from blog-md/); soft CTA → FB group/e-book
+articles/           Practical guides (conversion content) + their hero JPGs; CTA → e-book/consultation
+blog/               Story articles by Pavla (flat, generated from blog-md/); soft CTA → FB group/e-book
 blog/images/        Compressed JPGs for blog articles (<slug>-N.jpg, max 1200px wide)
+lgbt-spanelsko/     LGBT section: index.html landing + the 6 guides (generated from blog-md/lgbt-spanelsko/)
 articles-md/        Markdown + PNG sources for articles/ (not published)
 blog-md/            Markdown + image sources for blog/, one folder per category (not published)
 style.css           All styles (single shared stylesheet)
@@ -34,8 +34,9 @@ The site deliberately separates two kinds of content — keep them separate:
    personal essays on culture, festivals, food, history. Listed as a filterable card grid
    (`.story-grid` + `.filter-bar` chips) below the guides on clanky.html. Each ends with a
    **soft CTA**: Facebook group + e-book. Never put the hard sales CTA on stories.
-   The 6 LGBT travel guides are a special series: they live in `blog/` too but are listed
-   only on `lgbt-spanelsko.html` (linked from a teaser section on clanky.html), not in the grid.
+   The 6 LGBT travel guides are a special series with their own top-level section
+   `lgbt-spanelsko/` (landing `lgbt-spanelsko/index.html`, linked from a teaser on clanky.html);
+   the generator routes the `lgbt-spanelsko` category there and they never appear in the grid.
 
 Shared conventions: no publication dates anywhere — only "X min čtení" (~200 words/min);
 category chip above the title; images compressed to JPG quality ~62, max 1200px wide.
@@ -58,7 +59,7 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
    (title/excerpt/read-time/thumbnail per article — useful for rebuilding the clanky.html grid).
 3. Run `python3 tools/rebuild_grid.py` — regenerates the story card grid in clanky.html from
    `tools/manifest.json`. For an LGBT guide, add a `.post-row--simple` row to
-   lgbt-spanelsko.html by hand instead (LGBT articles are excluded from the grid).
+   lgbt-spanelsko/index.html by hand instead (LGBT articles are excluded from the grid).
 4. Verify: no dead links/images, then commit.
 
 **New practical guide (articles):**
@@ -146,9 +147,9 @@ Real estate is woven into tiers 2 and 3 as bullets, plus a standalone feature se
 
 ## Subdirectory path note
 
-The `articles/` and `blog/` subdirectories use relative paths with `../` prefix:
+The `articles/`, `blog/` and `lgbt-spanelsko/` subdirectories use relative paths with `../` prefix:
 - `../style.css`, `../script.js`
 - `../images/logo.png`, `../images/logo-rev.png`
 - All nav links prefixed with `../`
-- Blog article images are referenced as `images/<slug>-N.jpg` (i.e. `blog/images/` relative to the page)
-- Back link: blog stories → `../clanky.html`, LGBT guides → `../lgbt-spanelsko.html`
+- Article images are referenced as `images/<slug>-N.jpg` (i.e. an `images/` folder next to the page)
+- Back link: blog stories → `../clanky.html`, LGBT guides → `index.html` (their own landing)

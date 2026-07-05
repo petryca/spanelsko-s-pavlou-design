@@ -3,9 +3,13 @@
 import re, os, glob, html, json, math, subprocess, unicodedata
 
 ROOT = "/Users/david/Code/spanelsko-s-pavlou-design"
-OUT_HTML = os.path.join(ROOT, "blog")
-OUT_IMG = os.path.join(ROOT, "blog", "images")
 SCRATCH = os.path.dirname(os.path.abspath(__file__))
+
+# category "lgbt-spanelsko" is published into its own top-level folder
+# (standalone section with lgbt-spanelsko/index.html landing); everything
+# else goes to blog/
+def out_folder(cat_key):
+    return "lgbt-spanelsko" if cat_key == "lgbt-spanelsko" else "blog"
 
 import markdown as md_lib
 
@@ -176,13 +180,16 @@ def truncate(text, limit):
     cut = text[:limit].rsplit(" ", 1)[0]
     return cut.rstrip(",.;:–- ") + "…"
 
-os.makedirs(OUT_IMG, exist_ok=True)
 manifest = []
 
 for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
     cat_key = os.path.basename(os.path.dirname(f))
     slug = os.path.basename(f)[:-3]
     label, order = CATEGORIES[cat_key]
+    folder = out_folder(cat_key)
+    OUT_HTML = os.path.join(ROOT, folder)
+    OUT_IMG = os.path.join(OUT_HTML, "images")
+    os.makedirs(OUT_IMG, exist_ok=True)
     text = open(f).read()
 
     # title = first H1
@@ -217,7 +224,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
         if not os.path.exists(dest):
             convert_img(src, dest)
         if thumb is None:
-            thumb = f"blog/images/{name}"
+            thumb = f"{folder}/images/{name}"
         return f"![{alt}](images/{name})"
     text = re.sub(r"!\[([^\]]*)\]\(([^)]+)\)", repl_img, text)
 
@@ -251,7 +258,7 @@ for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
     body = re.sub(r'<a href="(https?://[^"]+)"', r'<a href="\1" target="_blank" rel="noopener noreferrer"', body)
 
     if cat_key == "lgbt-spanelsko":
-        backurl, backlabel = "../lgbt-spanelsko.html", "Zpět na LGBT průvodce"
+        backurl, backlabel = "index.html", "Zpět na LGBT průvodce"
     else:
         backurl, backlabel = "../clanky.html", "Zpět na články"
 
@@ -273,4 +280,6 @@ for f in sorted(glob.glob(os.path.join(ROOT, "blog-md", "*", "*.md"))):
 
 manifest.sort(key=lambda a: (a["order"], a["title"]))
 json.dump(manifest, open(os.path.join(SCRATCH, "manifest.json"), "w"), ensure_ascii=False, indent=1)
-print(f"Generated {len(manifest)} pages, {len(glob.glob(OUT_IMG + '/*.jpg'))} images")
+total_imgs = len(glob.glob(os.path.join(ROOT, "blog", "images", "*.jpg"))) + \
+             len(glob.glob(os.path.join(ROOT, "lgbt-spanelsko", "images", "*.jpg")))
+print(f"Generated {len(manifest)} pages, {total_imgs} images")
