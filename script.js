@@ -18,6 +18,21 @@ if (navToggle && nav) {
   });
 }
 
+// Story category filter (clanky.html)
+const filterBar = document.querySelector('.filter-bar');
+if (filterBar) {
+  filterBar.addEventListener('click', (e) => {
+    const chip = e.target.closest('.chip');
+    if (!chip) return;
+    filterBar.querySelectorAll('.chip').forEach(c => c.classList.remove('is-active'));
+    chip.classList.add('is-active');
+    const cat = chip.dataset.cat;
+    document.querySelectorAll('.story-card').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+  });
+}
+
 // Fade-in on scroll
 const fadeEls = document.querySelectorAll('.fade-in');
 if ('IntersectionObserver' in window && fadeEls.length) {
