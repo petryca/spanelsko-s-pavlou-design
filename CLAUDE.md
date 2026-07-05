@@ -82,6 +82,7 @@ overwritten). Hand edits to `blog/*.html` will be lost on regeneration; edit the
 | `tapas.jpg` | Mission section on o-pavle.html |
 | `beach.jpg` | Vision section on o-pavle.html |
 | `ebook.jpg` | E-book cover on index.html and ebook.html |
+| `lgbt.jpg` | Page-hero background on lgbt-spanelsko/index.html |
 | `logo.png` | Header logo (44×44) on all pages |
 | `logo-rev.png` | Footer logo (44×44) on all pages |
 

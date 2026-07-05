@@ -253,6 +253,7 @@ h1, h2, h3, h4 {
 .page-hero__inner { position: relative; z-index: 2; padding: 56px 0; }
 .page-hero .eyebrow { color: #f0b08d; }
 .page-hero h1 { color: #fff; font-size: clamp(30px, 4.6vw, 46px); max-width: 760px; }
+.page-hero p { color: rgba(255,255,255,.88); margin-top: 16px; max-width: 720px; }
 
 /* simple light page header (no image) */
 .page-head { padding: 80px 0 40px; }
