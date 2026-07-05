@@ -1,0 +1,6 @@
+{
+  "permissions": {
+    "allow": ["Bash(git:*)", "Bash(python3:*)", "Edit", "Write"],
+    "deny": ["Bash(rm -rf:*)"]
+  }
+}

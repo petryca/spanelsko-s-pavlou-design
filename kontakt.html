@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt — Španělsko s Pavlou</title>
+  <meta name="description" content="Ozvěte se Pavle — napište přes formulář nebo rovnou na WhatsApp. Obvykle odpovídáme do 24 hodin.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark" aria-hidden="true">
+          <img src="images/logo.png" alt="" width="44" height="44">
+        </span>
+        Španělsko s Pavlou
+      </a>
+      <nav class="nav" id="nav">
+        <button class="nav__toggle" aria-label="Otevřít menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="nav__links">
+          <a href="index.html" class="nav__link">Domů</a>
+          <a href="sluzby.html" class="nav__link">Služby</a>
+          <a href="o-pavle.html" class="nav__link">O Pavle</a>
+          <a href="clanky.html" class="nav__link">Články</a>
+          <a href="kontakt.html" class="nav__link is-active">Kontakt</a>
+        </div>
+        <a href="kontakt.html" class="btn btn--primary">Nezávazná konzultace</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Kontakt</span>
+        <h1>Ozvěte se mi</h1>
+        <p>Máte konkrétní otázku nebo si chcete domluvit konzultaci? Napište mi přes formulář, nebo rovnou na WhatsAppu — obvykle odpovídám do 24 hodin.</p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:24px;">
+      <div class="container">
+        <div class="contact-grid fade-in">
+
+          <!-- Form -->
+          <div class="contact-card">
+            <h2>Napište mi zprávu</h2>
+            <p>Hodí se, když chcete sepsat víc do detailu nebo přiložit konkrétní situaci.</p>
+            <form class="contact-form" action="https://formspree.io/f/mpqnkqro" method="POST">
+              <div class="form-row">
+                <label class="field">
+                  <span class="field__label">Jméno</span>
+                  <input type="text" name="name" class="field__input" required>
+                </label>
+                <label class="field">
+                  <span class="field__label">E-mail</span>
+                  <input type="email" name="email" class="field__input" required>
+                </label>
+              </div>
+              <label class="field">
+                <span class="field__label">Telefon <span class="field__opt">(nepovinné)</span></span>
+                <input type="tel" name="phone" class="field__input">
+              </label>
+              <label class="field">
+                <span class="field__label">Vaše zpráva</span>
+                <textarea name="message" rows="6" class="field__input" required></textarea>
+              </label>
+              <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <button type="submit" class="btn btn--primary btn--lg btn--block">Odeslat zprávu</button>
+            </form>
+          </div>
+
+          <!-- WhatsApp / details -->
+          <aside class="contact-side">
+            <svg class="contact-side__wa-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+            <h2>Nebo rychle na WhatsAppu</h2>
+            <p>Nejjednodušší cesta pro krátké dotazy. Stačí jedno kliknutí a píšete mi přímo — žádné formuláře, žádné čekání.</p>
+            <a href="https://wa.me/420776544156?text=Dobr%C3%BD%20den%20Pavlo%2C%20m%C3%A1m%20dotaz%20ohledn%C4%9B%20st%C4%9Bhov%C3%A1n%C3%AD%20do%20%C5%A0pan%C4%9Blska." class="btn btn--whatsapp btn--lg btn--block" target="_blank" rel="noopener noreferrer">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413"/></svg>
+              Napsat na WhatsApp
+            </a>
+            <p class="contact-side__note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Obvykle odpovídám do 24 hodin
+            </p>
+            <hr class="contact-side__divider">
+            <div class="contact-side__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:info@spanelskospavlou.cz">info@spanelskospavlou.cz</a>
+            </div>
+            <div class="contact-side__detail">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+420776544156">+420 776 544 156</a>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__col footer__col--brand">
+          <a href="index.html" class="brand">
+            <span class="brand__mark" aria-hidden="true">
+          <img src="images/logo-rev.png" alt="" width="44" height="44">
+        </span>
+            Španělsko s Pavlou
+          </a>
+          <p class="footer__about">Profesionální relokační služby pro Čechy, kteří se stěhují do Španělska. Osobní přístup, zkušenost a klid na duši.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigace</h4>
+          <ul>
+            <li><a href="index.html">Domů</a></li>
+            <li><a href="sluzby.html">Služby</a></li>
+            <li><a href="o-pavle.html">O Pavle</a></li>
+            <li><a href="clanky.html">Články</a></li>
+            <li><a href="ebook.html">E-book</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Právní</h4>
+          <ul>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#">Ochrana údajů</a></li>
+            <li><a href="#">Obchodní podmínky</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Kontakt</h4>
+          <div class="footer__detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@spanelskospavlou.cz">info@spanelskospavlou.cz</a></div>
+          <div class="footer__detail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+420776544156">+420 776 544 156</a></div>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/groups/1294335829405014" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.linkedin.com/in/pavla-vovsov%C3%A1-kulh%C3%A1nkov%C3%A1-76503a37" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 Španělsko s Pavlou. Všechna práva vyhrazena.</span>
+        <span>Pavla je relokační konzultantka pro Španělsko.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
