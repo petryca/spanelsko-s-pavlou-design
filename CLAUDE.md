@@ -58,8 +58,11 @@ category chip above the title; images compressed to JPG quality ~62, max 1200px 
    fixes docx artifacts (`--` → `–`, tiny inline images → 🙂), and writes `tools/manifest.json`
    (title/excerpt/read-time/thumbnail per article — useful for rebuilding the clanky.html grid).
 3. Run `python3 tools/rebuild_grid.py` — regenerates the story card grid in clanky.html from
-   `tools/manifest.json`. For an LGBT guide, add a `.post-row--simple` row to
-   lgbt-spanelsko/index.html by hand instead (LGBT articles are excluded from the grid).
+   `tools/manifest.json`. Cards without a thumbnail get a `.story-card__fallback` with a
+   category icon (inline Lucide SVG from `CATEGORY_ICONS` in the script; a new category
+   needs an entry there, else a generic newspaper icon is used). For an LGBT guide, add a
+   `.post-row--simple` row to lgbt-spanelsko/index.html by hand instead (LGBT articles are
+   excluded from the grid).
 4. Verify: no dead links/images, then commit.
 
 **New practical guide (articles):**
@@ -121,6 +124,7 @@ Fonts: **Inter** (sans-serif) + **Lora** (serif headings) via Google Fonts.
 `.post-row`, `.post-row--simple` — blog listing rows (simple = no media column)  
 `.article`, `.article__hero`, `.article__body`, `.article__cta` — single article layout  
 `.story-card`, `.story-grid`, `.filter-bar`, `.chip` — story card grid with category filter  
+`.story-card__fallback` — icon placeholder on story cards without a thumbnail  
 `.bio`, `.bio__aside`, `.bio__photo` — circular portrait + caption (o-pavle.html, index.html)  
 
 ## Services structure (sluzby.html)
