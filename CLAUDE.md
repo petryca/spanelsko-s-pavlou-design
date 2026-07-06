@@ -130,7 +130,7 @@ Fonts: **Inter** (sans-serif) + **Lora** (serif headings) via Google Fonts.
 ## Services structure (sluzby.html)
 
 Three tiers only — do not add a 4th:
-1. **Základní konzultace** — od 2 500 Kč (fixed price)
+1. **Základní konzultace** — od 1 500 Kč (fixed price)
 2. **Kompletní podpora** — na míru (featured/highlighted tier)
 3. **Osobní concierge** — na míru (premium)
 
